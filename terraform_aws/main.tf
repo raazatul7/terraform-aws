@@ -21,6 +21,17 @@ resource "aws_instance" "aws_ec2_by_terraform" {
 
 }
 
+resource "aws_s3_bucket" "bucket_s3" {
+
+bucket = "trainwithshubham-tf-test-bucket"
+
+tags = {
+Name = "trainwithshubham-bucket"
+
+Environment = "Dev"
+}
+}	
+
 output "ec2_public_ips"{
 	value = aws_instance.aws_ec2_by_terraform.public_ip
 }
