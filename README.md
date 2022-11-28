@@ -35,6 +35,10 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list`
 - `sudo apt update`
 - `sudo apt-get install docker.io`
 
+Add permission for docker
+
+- `sudo chown $USER /var/run/docker.sock`
+
 ### Run Terraform
 
 Goto main.tf location
